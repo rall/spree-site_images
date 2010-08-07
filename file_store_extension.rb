@@ -13,19 +13,6 @@ class FileStoreExtension < Spree::Extension
   # end
   
   def activate
-
-    # Add your extension tab to the admin.
-    # Requires that you have defined an admin controller:
-    # app/controllers/admin/yourextension_controller
-    # and that you mapped your admin in config/routes
-    Admin::BaseController.class_eval do
-      before_filter :add_file_store_extension_tab
-
-      def add_file_store_extension_tab
-        add_extension_admin_tab [:file_store, { :label => 'file_store', :route => 'admin_uploaded_files' } ]
-      end
-    end
-
     User.class_eval do
       has_many :uploaded_files
     end
