@@ -4,7 +4,8 @@
   <table class="basic-table">
     <tr>
       <td><%= t("thumbnail") %>:</td>
-      <td><%= link_to(image_tag(@image.attachment.url(:mini)), @image.attachment.url(:product)) %></td>
+      <td><%= link_to(image_tag(object.attachment.url(:mini)), object.attachment.url) %></td>
+      <td><%= t("page_placement") %>:</td>
     </tr>
     <%= render :partial => "form", :locals => { :f => f } %>
   </table>

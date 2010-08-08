@@ -1,6 +1,7 @@
 <table class="index">
   <tr>
     <th><%= t("thumbnail") %></th>
+    <th><%= t("page_position") %></th>
     <th><%= t("alt_text") %></th>
     <th><%= t("action") %></th>
   </tr>
@@ -8,6 +9,7 @@
   <% @site_images.each do |image| %>
     <tr id="<%= dom_id(image) %>">
       <td><%= link_to(image_tag(image.attachment.url(:mini)), t("image_link")) %></td>
+      <td><%= t(image.page_position) %></td>
       <td><%= image.alt %></td>
       <td class="actions">
         <%= link_to_with_icon('edit', t("edit"), edit_admin_site_image_url(image)) %>

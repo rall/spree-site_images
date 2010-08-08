@@ -6,3 +6,7 @@
   <td><%= t("alt_text") %>:</td>
   <td><%= f.text_area :alt %></td>
 </tr>
+<tr>
+  <td><%= t("page_position") %>:</td>
+  <td><%= f.select :page_position, SiteImage.select_options, { :include_blank => true } %></td>
+</tr>
