@@ -1,1 +1,1 @@
-PAGE_POSITIONS = YAML.load(SiteImageExtension.root.join("config", "page_positions.yml"))
+PAGE_POSITIONS = YAML.load(SiteImagesExtension.root.join("config", "page_positions.yml"))
