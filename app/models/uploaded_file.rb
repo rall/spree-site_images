@@ -1,4 +1,5 @@
 class UploadedFile < ActiveRecord::Base
+  belongs_to :user
   has_attachment :storage => "s3",
                  :path => "assets/products/:id/:style/:basename.:extension",
                  :s3_credentials => {
