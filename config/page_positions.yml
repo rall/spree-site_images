@@ -1,9 +1,3 @@
-home_page_main: 
-  label: Homepage main image
-  size: 760x372>
-home_page_sub_left: 
-  label: Homepage bottom left
-  size: 380x103>
-home_page_sub_right: 
-  label: Homepage bottom right
-  size: 380x103>
+home_page_main: 760x372>
+home_page_sub_left: 380x103>
+home_page_sub_right: 380x103>

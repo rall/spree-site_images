@@ -1,3 +1,8 @@
 ---
 en:
   image_link: Link to image
+  site_images: Site Images
+  page_position: Slot
+  home_page_main: Homepage main image
+  home_page_sub_left: Homepage bottom left
+  home_page_sub_right: Homepage bottom right
