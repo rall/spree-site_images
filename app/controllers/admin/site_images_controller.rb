@@ -1,6 +1,10 @@
-class Admin::SiteImagesController < Admin::ImagesController
-  skip_before_filter :load_data
+class Admin::SiteImagesController < Admin::BaseController
+  resource_controller
   
+  new_action.response do |wants|
+    wants.html {render :action => :new, :layout => false}
+  end
+
   create.response do |wants|
     wants.html {redirect_to admin_site_images_url}
   end
@@ -9,16 +13,9 @@ class Admin::SiteImagesController < Admin::ImagesController
     wants.html {redirect_to admin_site_images_url}
   end
   
-  index.before do
-    @site_images = SiteImage.find :all
+  destroy.response do |wants| 
+    wants.html do
+      render :text => ""
+    end
   end
-  
-  private
-  #undefine these viewable-specific methods
-  def set_viewable
-  end
-
-  def destroy_before 
-  end
-  
 end
