@@ -8,7 +8,7 @@
 
   <% @site_images.each do |image| %>
     <tr id="<%= dom_id(image) %>">
-      <td><%= link_to(image_tag(image.attachment.url(:mini)), t("image_link")) %></td>
+      <td><%= link_to(image_tag(image.attachment.url(:mini)), image.attachment.url) %></td>
       <td><%= t(image.page_position) %></td>
       <td><%= image.alt %></td>
       <td class="actions">
