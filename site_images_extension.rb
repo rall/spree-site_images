@@ -13,6 +13,5 @@ class SiteImagesExtension < Spree::Extension
   # end
   
   def activate
-    PAGE_POSITIONS = YAML.load(SiteImageExtension.root.join("config", "page_positions.yml"))
   end
 end
