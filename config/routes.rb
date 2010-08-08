@@ -1,3 +1,3 @@
 map.namespace :admin do |admin|
-  admin.resources :site_images, :only => [:index, :new, :create, :destroy]
+  admin.resources :site_images
 end
