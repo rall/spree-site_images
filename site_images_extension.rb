@@ -13,5 +13,8 @@ class SiteImagesExtension < Spree::Extension
   # end
   
   def activate
+    Spree::BaseController.class_eval do
+      helper :site_images
+    end
   end
 end
