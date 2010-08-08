@@ -99,17 +99,17 @@ namespace :spec do
   end
 end
 
-desc 'Generate documentation for the file_store extension.'
+desc 'Generate documentation for the site_images extension.'
 Rake::RDocTask.new(:rdoc) do |rdoc|
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title    = 'FileStoreExtension'
+  rdoc.title    = 'SiteImagesExtension'
   rdoc.options << '--line-numbers' << '--inline-source'
   rdoc.rdoc_files.include('README')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
 
 # For extensions that are in transition
-desc 'Test the file_store extension.'
+desc 'Test the site_images extension.'
 Rake::TestTask.new(:test) do |t|
   t.libs << 'lib'
   t.pattern = 'test/**/*_test.rb'
